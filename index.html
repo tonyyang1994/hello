@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>電子時鐘</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      h1 {
+        font-size: 3em;
+        margin-top: 0.5em;
+      }
+      
+      p {
+        font-size: 2em;
+        margin-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="time"></h1>
+    <p id="date"></p>
+    
+    <script>
+      function updateTime() {
+        var today new Date();
+        var time = today.toLocaleTimeString();
+        var date = today.toLocaleDateString();
+        document.getElementById("time").innerHTML = time;
+        document.getElementById("date").innerHTML = date;
+      }
+      
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
